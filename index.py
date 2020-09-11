@@ -12,7 +12,7 @@ def home():
 
     print("Token 1:" + token1)
     print("Token 2:" + token2)
-    token_decoded = instance.decode(token1)
+    token_decoded = instance.decode(token1, verify=False)
     return ""
 
 if __name__ == '__main__':
