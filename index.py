@@ -1,7 +1,8 @@
 from flask import Flask, request, jsonify
 import os, sys, platform, json
 app = Flask(__name__)
-import jwt
+from jwt import (JWT)
+instance = JWT()
 
 @app.route("/")
 def home():
@@ -11,9 +12,7 @@ def home():
 
     print("Token 1:" + token1)
     print("Token 2:" + token2)
-
-    token_decoded = jwt.decode(token1)
-
+    token_decoded = instance.decode(token1)
     return ""
 
 if __name__ == '__main__':
