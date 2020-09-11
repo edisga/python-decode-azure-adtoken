@@ -16,8 +16,9 @@ def home():
     token1 =  request.headers.get('x-ms-token-aad-id-token')
     token2 =  request.headers.get('x-ms-token-aad-access-token')
 
-    print("Token 1:" + token1)
-    print("Token 2:" + token2)
+    print(token1)
+    print("--------------")
+    print(token2)
     token_decoded = decode_token(token1)
     return token_decoded
 
