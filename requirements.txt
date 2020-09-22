@@ -1,2 +1,2 @@
 Flask==1.1.2
-pyjwt
+pyjwt==1.7.1
